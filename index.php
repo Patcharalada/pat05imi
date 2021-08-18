@@ -11,16 +11,16 @@
 
 
 <?php
-         $Temperature = file_get_contents('https://api.thingspeak.com/channels/1458410/fields/1/last.txt');
-         $Humidity = file_get_contents('https://api.thingspeak.com/channels/1458410/fields/2/last.txt');
+         $Temperature = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/1/last.txt');
+         $Humidity = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/2/last.txt');
       ?>
          <script type="text/JavaScript">
           function timedRefresh(timeoutPeriod) {
           setTimeout("location.reload(true);",timeoutPeriod);
         }
     </script>
-         <?php echo "Humidity : ".$Temperature ?> 
-        <br> <?php echo " Temperature : ".$Humidity ?>
+         <?php echo "Humidity : ".$Temp ?> 
+        <br> <?php echo " Temperature : ".$Hum ?>
 
 </body>
 </html>
