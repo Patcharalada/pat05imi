@@ -13,14 +13,18 @@ function timedRefresh(timeoutPeriod)
 {
     setTimeout("location.reload(true);",timeoutPeriod);
 }
+    <meta http-equiv="refresh" content="15; url="<?php echo $_SERVER['PHP_SELF']; ?>">
 </script>
 </head>
   
 <body onload="JavaScript:timedRefresh(15000);">
 
 <?php
-  $hum = file_get_contents('https://api.thingspeak.com/channels/1458422/feeds.json?results=1');
-  $temp = file_get_contents('https://api.thingspeak.com/channels/1458422/feeds.json?results=1');
+   $Temp = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/1/last.txt');
+   $Hum = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/2/last.txt');
+    
+ echo "<br> temperature is = ".$temp"</br>";
+ echo "humidity is = ".$hum;
 ?>
 
 </body>
