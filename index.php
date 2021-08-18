@@ -11,8 +11,8 @@
 
 
 <?php
-         $Temperature = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/1/last.txt');
-         $Humidity = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/2/last.txt');
+         $Temp = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/1/last.txt');
+         $Hum = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/2/last.txt');
       ?>
          <script type="text/JavaScript">
           function timedRefresh(timeoutPeriod) {
