@@ -20,7 +20,7 @@ function timedRefresh(timeoutPeriod)
 
 <?php
   $hum = file_get_contents('https://api.thingspeak.com/channels/1458422/feeds.json?results=1');
-  $temp = file_get_contents('https://api.thingspeak.com/channels/1458422/feeds.json?results=1');
+  $temp = file_get_contents('https://api.thingspeak.com/channels/1458422/feeds.json?results=2');
 
  echo "<br> temperature is = ".$temp."<br>";
  echo "humidity is = ".$hum;
