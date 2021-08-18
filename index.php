@@ -10,23 +10,17 @@
 <iframe src = "https://thingspeak.com/channels/1458422/maps/channel_show"  style="border:none"; height="300px" width="500px"></iframe>
 
 
-  
-
 <?php
-    <script type="text/JavaScript">
-function timedRefresh(timeoutPeriod)
-{
-    setTimeout("location.reload(true);",timeoutPeriod);
-}
-
-   $Temp = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/1/last.txt');
-   $Hum = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/2/last.txt');
-    
- echo "<br> temperature is = ".$Temp"</br>";
- echo "humidity is = ".$Hum;
-</script>
-?>
-
+         $Temperature = file_get_contents('https://api.thingspeak.com/channels/1458410/fields/1/last.txt');
+         $Humidity = file_get_contents('https://api.thingspeak.com/channels/1458410/fields/2/last.txt');
+      ?>
+         <script type="text/JavaScript">
+          function timedRefresh(timeoutPeriod) {
+          setTimeout("location.reload(true);",timeoutPeriod);
+        }
+    </script>
+         <?php echo "Humidity : ".$Temperature ?> 
+        <br> <?php echo " Temperature : ".$Humidity ?>
 
 </body>
 </html>
