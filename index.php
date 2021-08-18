@@ -24,8 +24,8 @@ function timedRefresh(timeoutPeriod)
    $Temp = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/1/last.txt');
    $Hum = file_get_contents('https://api.thingspeak.com/channels/1458422/fields/2/last.txt');
     
- echo "<br> temperature is = ".$temp"</br>";
- echo "humidity is = ".$hum;
+ echo "<br> temperature is = ".$Temp"</br>";
+ echo "humidity is = ".$Hum;
 ?>
 
 </body>
